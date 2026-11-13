@@ -13,3 +13,6 @@ tsconfig.tsbuildinfo
 # Готовые платформы учеников живут в своих репозиториях; здесь только документы проекта
 projects/*/site/node_modules/
 projects/*/site/dist/
+
+# Материалы дизайна ученика (PDF, логотипы клиента): в репозиторий не попадают
+projects/*/design-input/

@@ -13,7 +13,7 @@
 2. Структура: страницы, разделы, меню ⏸
 3. Роли и кабинет ⏸
 4. Продукты, цены, оплата, КП-страницы ⏸
-5. Дизайн: картинка `reference/style-previews/designs.jpg`, выбор по номеру ⏸
+5. Дизайн: картинки `reference/style-previews/designs-A…E.jpg` (32 дизайна и вариант 33 «свой»), шрифты `fonts-1…4.jpg`, порядок в `patterns/README.md` ⏸
 6. Контент: тексты, фото, видео ⏸
 7. Сервисы: Supabase, Vercel, Resend ⏸
 8. Сборка в `projects/<id>/site/` по `scripts/new-project.sh`

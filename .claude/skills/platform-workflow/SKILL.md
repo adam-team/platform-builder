@@ -12,7 +12,7 @@ description: Use at the start of every new learning-platform project in this rep
 3. **Структура** ⏸: картинка `reference/style-previews/structure.jpg`, страницы, меню сайта, меню кабинета, меню админки. Файл `STRUCTURE.md`.
 4. **Роли** ⏸: гость, оплативший, куратор, админ; задания, чаты, календарь. Дополняет `STRUCTURE.md`.
 5. **Продукты** ⏸: курсы, цены, оплата, КП-страницы. Таблица в `BRIEF.md`.
-6. **Дизайн** ⏸: картинка `reference/style-previews/designs.jpg`, номер 1-8 или свой, шрифты, логотип. Файл `DESIGN.md`.
+6. **Дизайн** ⏸: картинки `reference/style-previews/designs-A…E.jpg`, номер 1-32 или 33 «свой», шрифты (`fonts-1…4.jpg`), логотип, порядок в `patterns/README.md`. Файл `DESIGN.md`.
 7. **Контент** ⏸: герой, об эксперте, курсы, уроки, видео, база куратора. Файл `CONTENT.md`.
 8. **Сервисы** ⏸: Supabase, Vercel, Resend, Google Sheets. Файл `INTEGRATIONS.md`, без секретов.
 9. **Сборка** по навыку `platform-build` в `projects/<id>/site/`, затем проверки и выкладка ⏸.

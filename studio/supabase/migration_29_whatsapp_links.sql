@@ -1,0 +1,11 @@
+-- «Курсты алу» / «Консультацияға жазылу» / «Разборға жазылу» / «Сопровождение алу» батырмаларының WhatsApp сілтемелері
+alter table public.courses add column if not exists order_url text;
+
+update public.courses set order_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%C2%AB%D2%9A%D0%B0%D1%80%D1%8B%D0%B7%D1%81%D1%8B%D0%B7%20%D3%A9%D0%BC%D1%96%D1%80%C2%BB%20%D0%BA%D1%83%D1%80%D1%81%D1%8B%D0%BD%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id = 'c18908aa-2db5-4780-98b2-4fc2398995a7';
+update public.courses set order_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%C2%AB%D0%90%D2%9B%D1%88%D0%B0%20%D0%B6%D0%B8%D0%BD%D0%B0%D1%83%C2%BB%20%D0%BA%D1%83%D1%80%D1%81%D1%8B%D0%BD%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id = '69b966a7-1965-4ef6-99b2-8e5713021059';
+update public.courses set order_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%C2%AB%D2%AE%D0%B9%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD%C2%BB%20%D0%BA%D1%83%D1%80%D1%81%D1%8B%D0%BD%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id = '0795dd25-372d-4237-977d-12dbbe3260f6';
+update public.courses set order_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%C2%AB%D0%98%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%20PRO%C2%BB%20%D0%BA%D1%83%D1%80%D1%81%D1%8B%D0%BD%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id = '1656243b-e948-4659-8fca-0e71b874bdcc';
+
+update public.services set payment_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%D0%A2%D0%B5%D0%B3%D1%96%D0%BD%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B0%D0%BB%D2%93%D1%8B%D0%BC%20%D0%BA%D0%B5%D0%BB%D0%B5%D0%B4%D1%96...' where id = '7518692a-442e-4608-b507-578bd7327f4f';
+update public.services set payment_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%D2%9A%D0%B0%D1%80%D0%B6%D1%8B%D0%BB%D1%8B%D2%9B%20/%20%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%D0%BB%D1%8B%D2%9B%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D2%93%D0%B0%20%D0%B6%D0%B0%D0%B7%D1%8B%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id = 'b57437fb-abf0-40e7-9460-b021d4c5c6a5';
+update public.services set payment_url = 'https://wa.clck.bar/7XXXXXXXXXX?text=%D0%98%D0%BF%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%20%D0%B1%D0%BE%D0%B9%D1%8B%D0%BD%D1%88%D0%B0%20%D1%81%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BB%D0%B0%D0%BC%D1%8B%D0%BD' where id in ('da7f60b6-6c15-41f7-be1c-419649817902', '87d555c0-2ddf-4d18-9671-0289408bf82e');

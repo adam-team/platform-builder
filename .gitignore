@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+tsconfig.tsbuildinfo
+.vercel/
+
+# Секреты и локальные окружения. Образцы .env.example остаются.
+.env
+.env.*
+!.env.example
+*:Zone.Identifier
+
+# Готовые платформы учеников живут в своих репозиториях; здесь только документы проекта
+projects/*/site/node_modules/
+projects/*/site/dist/

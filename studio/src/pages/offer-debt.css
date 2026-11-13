@@ -1,0 +1,278 @@
+/* «Қарызсыз өмір» — сатылым беті. Стиль: терең көк-түн + мыс-янтарь акцент, дербес дизайн (Ипотека PRO бетінен бөлек). */
+.kd {
+  --n950: #050f20; --n900: #0a1a33; --n850: #0f2444; --n800: #153058; --n700: #1e4270;
+  --a1: #ffe3b0; --a2: #f0a94e; --a3: #c9791f; --a4: #8a4e12;
+  --amber: linear-gradient(135deg, var(--a1) 0%, var(--a2) 45%, var(--a3) 100%);
+  --cream: #f7f4ee; --ink: #12141c; --ink-soft: #545a6d;
+  --serif: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Onest', var(--font), system-ui, sans-serif;
+  font-family: var(--sans); color: var(--ink); background: var(--n950); overflow-x: clip;
+}
+.kd *, .kd *::before, .kd *::after { box-sizing: border-box; }
+.kd img { max-width: 100%; }
+.kd-wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; position: relative; }
+.kp-icon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.kd-narrow { max-width: 700px; }
+.kd-center { text-align: center; }
+.kd-cta-center { text-align: center; margin-top: 26px; }
+
+.kd-h1, .kd-h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.01em; }
+.kd-h1 { font-size: clamp(3.2rem, 8.4vw, 5.6rem); line-height: 0.94; color: #fff; margin: 16px 0 0; }
+.kd-h1 em { font-style: italic; font-weight: 600; background: var(--amber); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kd-h2 { font-size: clamp(1.9rem, 4.6vw, 2.9rem); line-height: 1.08; text-align: center; color: #fff; margin: 0 0 30px; text-wrap: balance; }
+.kd-h2 em { font-style: italic; font-weight: 600; background: var(--amber); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kd-h2.kd-left { text-align: left; }
+.kd-light .kd-h2 { color: var(--ink); }
+.kd-light .kd-h2 em { background: linear-gradient(135deg, #c9791f, #8a4e12); -webkit-background-clip: text; background-clip: text; }
+.kd-eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--a2); margin-bottom: 10px; }
+.kd-light .kd-eyebrow { color: var(--a3); }
+
+.kd-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 14px; border: 0; cursor: pointer; font-family: var(--sans); font-weight: 800; font-size: 0.96rem; color: #2c1704; background: var(--amber); box-shadow: 0 12px 26px -12px rgba(240,169,78,0.6), inset 0 1px 0 rgba(255,255,255,0.5); transition: transform .2s, box-shadow .2s; text-align: center; }
+.kd-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 34px -12px rgba(240,169,78,0.8), inset 0 1px 0 rgba(255,255,255,0.5); }
+.kd-btn svg { width: 18px; height: 18px; }
+.kd-btn-lg { padding: 16px 32px; font-size: 1rem; }
+.kd-btn-sm { padding: 9px 20px; font-size: 0.84rem; border-radius: 11px; }
+.kd-btn-block { display: flex; width: 100%; }
+.kd-btn-ghost { color: #fff; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,169,78,0.5); box-shadow: none; }
+.kd-btn-ghost:hover { background: rgba(240,169,78,0.14); box-shadow: none; }
+
+.kd-top { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s; }
+.kd-top.solid { background: rgba(5,15,32,0.95); box-shadow: 0 1px 0 rgba(240,169,78,0.2); }
+.kd-top-in { display: flex; align-items: center; gap: 16px; height: 60px; }
+.kd-back { color: rgba(255,255,255,0.85); font-weight: 700; font-size: 0.86rem; }
+.kd-back:hover { color: var(--a1); }
+.kd-logo { height: 24px; width: auto; margin-right: auto; }
+.kd-nav { display: flex; gap: 22px; margin-right: 18px; }
+.kd-nav a { color: rgba(255,255,255,0.78); font-size: 0.85rem; font-weight: 600; }
+.kd-nav a:hover { color: var(--a1); }
+
+/* ---------- Hero (1-блок): эксперт фотосы + ұсыныс ---------- */
+.kd-hero { position: relative; padding: 92px 0 0; background: radial-gradient(65% 60% at 80% 15%, rgba(240,169,78,0.16), transparent 70%), radial-gradient(60% 50% at 10% 90%, rgba(30,66,112,0.5), transparent 70%), linear-gradient(180deg, #0a1a33 0%, #050f20 100%); overflow: hidden; }
+.kd-hero-in { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 32px; align-items: start; position: relative; z-index: 2; }
+.kd-hero-text { padding: 6px 0; }
+.kd-hero-brand { display: inline-flex; align-items: center; gap: 10px; padding: 7px 16px 7px 8px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(240,169,78,0.4); color: var(--a1); font-size: 0.78rem; font-weight: 700; }
+.kd-hero-brand img { height: 20px; border-radius: 5px; }
+.kd-lead { margin-top: 18px; color: rgba(255,255,255,0.88); font-size: 1.06rem; line-height: 1.6; max-width: 460px; }
+.kd-lead-sub { margin-top: 12px; color: rgba(255,255,255,0.58); font-size: 0.92rem; line-height: 1.55; max-width: 440px; }
+.kd-price-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.kd-old { font-size: 1.15rem; color: rgba(255,255,255,0.42); text-decoration: line-through; }
+.kd-new { font-family: var(--serif); font-weight: 700; font-size: 2.5rem; background: var(--amber); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kd-badge-off { padding: 6px 13px; border-radius: 999px; background: rgba(240,169,78,0.16); border: 1px solid rgba(240,169,78,0.5); color: var(--a1); font-weight: 800; font-size: 0.78rem; }
+.kd-cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.kd-hero-photo-wrap { position: relative; max-width: 360px; margin: 0 auto; }
+.kd-hero-photo-frame { position: relative; border-radius: 32px; border: 1px solid rgba(240,169,78,0.4); box-shadow: 0 30px 70px -30px rgba(0,0,0,0.7), 0 0 60px -20px rgba(240,169,78,0.35); }
+.kd-hero-photo-frame img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; border-radius: inherit; }
+.kd-hero-photo-frame::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(0deg, rgba(5,15,32,0.92) 0%, rgba(5,15,32,0.75) 26%, transparent 55%); z-index: 1; }
+.kd-hero-badge { position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 15px; background: rgba(5,15,32,0.85); border: 1px solid rgba(240,169,78,0.5); box-shadow: 0 14px 30px -14px rgba(0,0,0,0.6); color: #fff; font-size: 0.8rem; font-weight: 700; }
+.kd-hero-badge svg { width: 18px; height: 18px; flex: none; }
+.kd-hero-badge.b-top { top: -14px; right: -14px; }
+.kd-hero-badge.b-bottom { left: -14px; bottom: 18px; }
+.kd-hero-badge b { display: block; font-family: var(--serif); font-size: 1.15rem; line-height: 1; }
+.kd-hero-photo-caption { position: absolute; z-index: 2; left: 22px; right: 22px; bottom: 22px; color: #fff; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.14rem; line-height: 1.5; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85); }
+
+.kd-hero-chart { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 110px; opacity: 0.45; z-index: 1; }
+
+/* Декор: жарқылдар мен монеталар (ақша атмосферасы) */
+.kd-spark { position: absolute; z-index: 1; opacity: 0.85; pointer-events: none; animation: kd-twinkle 3.2s ease-in-out infinite; }
+.kd-spark.d1 { animation-delay: -1.1s; }
+.kd-spark.d2 { animation-delay: -2.1s; }
+.kd-coin { position: absolute; z-index: 1; opacity: 0.8; pointer-events: none; animation: kd-bob 6s ease-in-out infinite; }
+.kd-coin.d2 { animation-delay: -3s; }
+@keyframes kd-twinkle { 0%, 100% { opacity: 0.25; transform: scale(0.75) rotate(0deg); } 50% { opacity: 1; transform: scale(1.05) rotate(20deg); } }
+@keyframes kd-bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+@media (prefers-reduced-motion: reduce) { .kd-spark, .kd-coin { animation: none; opacity: 0.6; } }
+
+/* Hero астындағы жолақ: форматтар + негізгі шақыру (баға осында, бастапқы блокта емес) */
+.kd-hero-action { position: relative; z-index: 2; margin-top: 34px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.12); }
+.kd-hero-facts-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
+.kd-fact { padding: 16px 14px; border-radius: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); }
+.kd-fact .ic { display: inline-flex; width: 32px; height: 32px; border-radius: 10px; align-items: center; justify-content: center; background: rgba(240,169,78,0.16); margin-bottom: 9px; }
+.kd-fact .ic svg { width: 16px; height: 16px; }
+.kd-fact span { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.55); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+.kd-fact b { display: block; font-size: 0.86rem; color: #fff; font-weight: 700; line-height: 1.35; }
+.kd-hero-action .kd-price-row { margin-bottom: 20px; }
+
+/* ---------- Секциялар ---------- */
+.kd-sec { padding: 68px 0; position: relative; }
+.kd-light { background: var(--cream); color: var(--ink); }
+.kd-dark { background: linear-gradient(180deg, var(--n900), var(--n950)); color: #fff; }
+.kd-light .kd-lead-center { color: var(--ink-soft); }
+
+/* Bento (Кімге арналған) — бірінші карта үлкен, қалғаны кіші */
+.kd-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.kd-bento-card { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border-radius: 18px; background: #fff; border: 1px solid rgba(201,121,31,0.22); box-shadow: 0 14px 28px -24px rgba(7,23,48,0.6); grid-column: span 3; }
+.kd-bento-card:first-child { grid-column: 1 / -1; background: linear-gradient(120deg, var(--n900), var(--n800)); border-color: rgba(240,169,78,0.4); }
+.kd-bento-card:first-child p { color: #fff; }
+.kd-bento-card .ic { flex: none; width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(135deg, var(--n800), var(--n900)); }
+.kd-bento-card:first-child .ic { background: rgba(240,169,78,0.18); }
+.kd-bento-card .ic svg { width: 20px; height: 20px; }
+.kd-bento-card p { font-weight: 600; line-height: 1.45; font-size: 0.95rem; padding-top: 4px; }
+
+/* Нәтиже — сурет + көрсеткі тізім */
+.kd-results-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; align-items: center; margin-bottom: 36px; }
+.kd-road { position: relative; padding: 42px 0 34px; }
+.kd-road svg { width: 100%; height: auto; }
+.kd-road-label { position: absolute; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.6); }
+.kd-road-label.start { left: 2%; bottom: 0; }
+.kd-road-label.end { right: 0; top: 0; text-align: right; color: var(--a1); }
+.kd-arrow-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.kd-arrow-list li { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border-radius: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-weight: 600; font-size: 0.95rem; line-height: 1.4; }
+.kd-arrow-list li svg { flex: none; width: 18px; height: 18px; color: var(--a1); margin-top: 2px; }
+.kd-main-result { max-width: 780px; margin: 0 auto; padding: 26px 30px; border-radius: 22px; background: linear-gradient(165deg, rgba(240,169,78,0.14), rgba(255,255,255,0.02)); border: 1px solid rgba(240,169,78,0.4); text-align: center; }
+.kd-main-result .tag { display: inline-block; margin-bottom: 12px; padding: 6px 15px; border-radius: 999px; background: rgba(240,169,78,0.18); color: var(--a1); font-weight: 800; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.kd-main-result p { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.4; color: #fff; }
+.kd-main-result .note { display: block; margin-top: 12px; color: rgba(255,255,255,0.55); font-size: 0.84rem; }
+
+/* Оқу қалай өтеді — көлденең/тік уақыт жолағы */
+.kd-timeline { display: flex; gap: 0; margin-top: 8px; }
+.kd-tstep { flex: 1; text-align: center; padding-top: 4px; position: relative; }
+.kd-tstep:not(:first-child)::before { content: ''; position: absolute; left: -50%; right: 50%; top: 33px; height: 2px; background: repeating-linear-gradient(90deg, var(--a3) 0 8px, transparent 8px 15px); z-index: 1; }
+.kd-tstep .dot { position: relative; z-index: 2; width: 66px; height: 66px; margin: 0 auto 14px; border-radius: 50%; background: #fff; border: 2px solid rgba(201,121,31,0.35); display: grid; place-items: center; box-shadow: 0 10px 22px -14px rgba(7,23,48,0.4); }
+.kd-tstep .dot svg { width: 26px; height: 26px; }
+.kd-tstep .n { position: absolute; top: -6px; right: calc(50% - 40px); width: 22px; height: 22px; border-radius: 50%; background: var(--amber); color: #2c1704; font-weight: 800; font-size: 0.72rem; display: grid; place-items: center; z-index: 3; }
+.kd-tstep p { font-weight: 700; font-size: 0.86rem; line-height: 1.35; max-width: 130px; margin: 0 auto; }
+.kd-note-center { text-align: center; margin-top: 26px; color: var(--ink-soft); font-style: italic; font-family: var(--serif); font-size: 1.1rem; }
+
+/* Бағдарлама */
+.kd-prog { display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 44px; align-items: start; }
+.kd-prog-side { position: sticky; top: 76px; }
+.kd-prog-side .kd-h2 { text-align: left; }
+.kd-prog-side p { color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 20px; }
+.kd-prog-meta { display: flex; gap: 10px; margin-bottom: 24px; }
+.kd-prog-meta div { flex: 1; padding: 13px 8px; border-radius: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); text-align: center; }
+.kd-prog-meta b { display: block; font-family: var(--serif); font-size: 1.9rem; color: var(--a1); line-height: 1; }
+.kd-prog-meta span { font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.6); }
+
+.kd-modules { display: grid; gap: 12px; }
+.kd-mod { border-radius: 18px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
+.kd-mod.open { border-color: rgba(240,169,78,0.55); background: rgba(255,255,255,0.06); }
+.kd-mod-head { display: grid; grid-template-columns: 46px 1fr auto 20px; gap: 14px; align-items: center; width: 100%; padding: 14px 16px; background: none; border: 0; text-align: left; cursor: pointer; color: #fff; font-family: var(--sans); }
+.kd-mod-num { width: 46px; height: 46px; border-radius: 13px; background: linear-gradient(135deg, var(--n700), var(--n800)); color: var(--a1); font-family: var(--serif); font-size: 1.45rem; font-weight: 700; display: grid; place-items: center; }
+.kd-mod.open .kd-mod-num { background: var(--amber); color: #2c1704; }
+.kd-mod-title { font-weight: 800; font-size: 0.98rem; line-height: 1.3; }
+.kd-mod-count { font-size: 0.72rem; font-weight: 800; color: var(--a1); background: rgba(240,169,78,0.16); padding: 4px 11px; border-radius: 999px; white-space: nowrap; }
+.kd-chev { color: var(--a1); display: grid; place-items: center; transition: transform .3s; }
+.kd-chev svg { width: 18px; height: 18px; }
+.kd-mod.open .kd-chev { transform: rotate(180deg); }
+.kd-lessons { padding: 2px 16px 16px 76px; display: grid; gap: 14px; }
+.kd-lesson-head { display: flex; align-items: center; gap: 9px; margin-bottom: 4px; }
+.kd-lesson-num { font-weight: 800; color: var(--a1); font-size: 0.84rem; }
+.kd-tech-ic { width: 19px; height: 19px; flex: none; }
+.kd-lesson b { font-size: 0.94rem; }
+.kd-lesson p { margin: 0 0 5px; color: rgba(255,255,255,0.66); font-size: 0.88rem; line-height: 1.48; }
+.kd-lesson-result { font-size: 0.82rem; color: var(--a1); font-weight: 600; }
+
+/* Курста не бар — біреуі үлкен */
+.kd-inside { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.kd-inside-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px 12px; border-radius: 18px; background: #fff; border: 1px solid rgba(201,121,31,0.22); text-align: center; grid-column: span 2; }
+.kd-inside-card:first-child { grid-column: 1 / -1; flex-direction: row; justify-content: center; gap: 26px; background: linear-gradient(120deg, var(--n900), var(--n800)); border-color: rgba(240,169,78,0.4); }
+.kd-inside-card:first-child span { color: #fff; }
+.kd-inside-card svg { width: 26px; height: 26px; }
+.kd-inside-card span { font-weight: 700; font-size: 0.88rem; line-height: 1.35; }
+
+/* ---------- Автор — ықшам портрет + анық аты ---------- */
+.kd-author { background: radial-gradient(65% 65% at 85% 30%, rgba(240,169,78,0.14), transparent 70%), linear-gradient(180deg, var(--n900), var(--n950)); }
+.kd-author-in { display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: start; }
+.kd-author-photo { position: relative; border-radius: 24px; overflow: hidden; border: 1px solid rgba(240,169,78,0.4); box-shadow: 0 24px 50px -26px rgba(0,0,0,0.7); }
+.kd-author-photo img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top center; }
+.kd-author-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 16px 14px; background: linear-gradient(0deg, rgba(5,15,32,0.92) 10%, transparent 100%); }
+.kd-author-cap b { display: block; color: #fff; font-family: var(--serif); font-size: 1.2rem; font-weight: 700; }
+.kd-author-cap span { color: var(--a1); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.03em; }
+.kd-facts { list-style: none; margin: 4px 0 18px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.kd-facts li { display: flex; align-items: center; gap: 11px; padding: 12px 14px; border-radius: 13px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); font-weight: 600; font-size: 0.88rem; color: #fff; line-height: 1.3; }
+.kd-facts li svg { flex: none; width: 18px; height: 18px; }
+.kd-story { color: rgba(255,255,255,0.7); line-height: 1.62; font-size: 0.95rem; }
+
+/* Неліктен қазір */
+.kd-lead-center { text-align: center; color: rgba(255,255,255,0.75); font-size: 1.03rem; line-height: 1.62; }
+.kd-why-split { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; margin-top: 26px; }
+.kd-why-lead { font-weight: 800; color: #fff; margin-bottom: 12px; }
+.kd-why-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.kd-why-list li { position: relative; padding-left: 26px; color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.95rem; }
+.kd-why-list li::before { content: '✓'; position: absolute; left: 0; color: var(--a1); font-weight: 800; }
+.kd-why-out { padding: 22px 24px; border-radius: 18px; background: linear-gradient(165deg, rgba(240,169,78,0.14), rgba(255,255,255,0.02)); border: 1px solid rgba(240,169,78,0.4); text-align: center; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: #fff; line-height: 1.4; }
+
+/* Тариф */
+.kd-tariff { background: radial-gradient(60% 55% at 50% 0%, rgba(240,169,78,0.18), transparent 70%), linear-gradient(180deg, var(--n900), var(--n950)); }
+.kd-tariff-card { position: relative; padding: 32px 30px; border-radius: 26px; background: linear-gradient(165deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border: 1px solid rgba(240,169,78,0.4); }
+.kd-ribbon { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); padding: 6px 18px; border-radius: 999px; background: var(--amber); color: #2c1704; font-weight: 800; font-size: 0.78rem; }
+.kd-tariff-card h3 { font-family: var(--serif); color: #fff; font-size: 1.8rem; margin: 0 0 18px; text-align: center; }
+.kd-tariff-card ul { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 11px; }
+.kd-tariff-card li { display: flex; align-items: center; gap: 11px; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.93rem; }
+.kd-tariff-card li svg { flex: none; width: 19px; height: 19px; }
+.kd-tariff-price { display: flex; align-items: baseline; justify-content: center; gap: 13px; margin-bottom: 22px; }
+
+/* Төлем */
+.kd-pay-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 18px 0 6px; }
+.kd-pay-row .ic { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; background: rgba(201,121,31,0.12); }
+.kd-pay-row .ic svg { width: 18px; height: 18px; color: var(--a3); }
+
+/* Финал */
+.kd-final { position: relative; padding: 72px 0; text-align: center; background: radial-gradient(60% 60% at 50% 20%, rgba(240,169,78,0.12), transparent 70%), linear-gradient(180deg, #050f20, #030a17); overflow: hidden; }
+.kd-quote { margin-top: 22px; font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--a1); }
+
+.kd-foot { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; padding: 24px 18px; font-size: 0.8rem; color: rgba(255,255,255,0.4); background: #030a17; border-top: 1px solid rgba(240,169,78,0.15); }
+.kd-logo-foot { height: 28px; opacity: 0.85; }
+
+.kd-sticky { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(5,15,32,0.95); border-top: 1px solid rgba(240,169,78,0.3); }
+
+.kd-rv { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.kd-rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .kd-rv { opacity: 1; transform: none; transition: none; } }
+
+.kd-sec, .kd-final { content-visibility: auto; contain-intrinsic-size: auto 640px; }
+.kd-hero { content-visibility: visible; }
+
+@media (max-width: 980px) {
+  .kd-nav { display: none; }
+  .kd-results-grid { grid-template-columns: 1fr; gap: 24px; }
+  .kd-road { max-width: 320px; margin: 0 auto; }
+  .kd-prog { grid-template-columns: 1fr; }
+  .kd-prog-side { position: static; text-align: center; }
+  .kd-prog-side .kd-h2 { text-align: center; }
+  .kd-author-in { grid-template-columns: 220px 1fr; gap: 28px; }
+  .kd-why-split { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .kd { padding-bottom: 72px; }
+  .kd-sticky { display: block; }
+  .kd-wrap { padding: 0 18px; }
+  .kd-sec { padding: 48px 0; }
+  .kd-h2 { margin-bottom: 22px; }
+  .kd-top-in { height: 56px; }
+  .kd-hero { padding-top: 76px; }
+  .kd-hero-in { grid-template-columns: 1fr; gap: 26px; }
+  .kd-hero-text { text-align: center; padding-bottom: 8px; }
+  .kd-lead { margin: 14px auto 0; }
+  .kd-lead-sub { margin: 10px auto 0; }
+  .kd-price-row { justify-content: center; }
+  .kd-hero-action { margin-top: 24px; padding-top: 22px; }
+  .kd-hero-facts-strip { grid-template-columns: 1fr 1fr; }
+  .kd-cta-row { justify-content: center; }
+  .kd-cta-row .kd-btn { flex: 1 1 100%; }
+  .kd-hero-photo-wrap { max-width: 270px; margin: 0 auto; }
+  .kd-hero-photo-caption { font-size: 1rem; left: 16px; right: 16px; }
+  .kd-hero-badge.b-top { top: -10px; right: -10px; padding: 8px 11px; }
+  .kd-hero-badge b { font-size: 1rem; }
+  .kd-hero-chart { display: none; }
+  .kd-spark { width: 16px; height: 16px; }
+  .kd-coin { width: 24px; height: 24px; }
+  .kd-bento { grid-template-columns: 1fr; }
+  .kd-bento-card { grid-column: auto !important; }
+  .kd-timeline { flex-direction: column; gap: 18px; align-items: flex-start; }
+  .kd-tstep { text-align: left; display: flex; align-items: center; gap: 14px; padding-top: 0; }
+  .kd-tstep:not(:first-child)::before { left: 32px; right: auto; top: -18px; width: 2px; height: 18px; background: repeating-linear-gradient(180deg, var(--a3) 0 6px, transparent 6px 11px); }
+  .kd-tstep .dot { margin: 0; width: 56px; height: 56px; flex: none; }
+  .kd-tstep .n { top: -4px; right: auto; left: 40px; }
+  .kd-tstep p { max-width: none; text-align: left; }
+  .kd-inside { grid-template-columns: 1fr 1fr; }
+  .kd-inside-card { grid-column: auto !important; }
+  .kd-inside-card:first-child { flex-direction: column; gap: 10px; }
+  .kd-author-in { grid-template-columns: 1fr; }
+  .kd-author-photo { max-width: 240px; margin: 0 auto; }
+  .kd-facts { grid-template-columns: 1fr; }
+  .kd-tariff-card { padding: 28px 20px; }
+  .kd-final { padding: 52px 0; }
+}

@@ -1,0 +1,36 @@
+-- Миграция 08: раньше карточки целей на главной, интро+шаги на странице бесплатных уроков,
+-- блок о компании Brand, блок кейсов и финальный призыв к действию были зашиты в коде
+-- (src/lib/content.ts) и не редактировались из админки. Теперь всё это — колонки site_settings,
+-- редактируются на страницах «Сайт → Басты бет / Тегін сабақтар / Қызметтер беті».
+-- Выполнить после migration_07_support_chat.sql. Ничего не удаляет.
+
+alter table public.site_settings
+  add column if not exists goal1_title text, add column if not exists goal1_text text,
+  add column if not exists goal2_title text, add column if not exists goal2_text text,
+  add column if not exists goal3_title text, add column if not exists goal3_text text,
+  add column if not exists goal4_title text, add column if not exists goal4_text text,
+  add column if not exists final_cta_title text,
+  add column if not exists final_cta_text text,
+  add column if not exists final_cta_label text,
+  add column if not exists free_eyebrow text,
+  add column if not exists free_title text,
+  add column if not exists free_text text,
+  add column if not exists free_step1_title text, add column if not exists free_step1_text text,
+  add column if not exists free_step2_title text, add column if not exists free_step2_text text,
+  add column if not exists free_step3_title text, add column if not exists free_step3_text text,
+  add column if not exists free_outro text,
+  add column if not exists free_outro_list jsonb not null default '[]'::jsonb,
+  add column if not exists free_materials_title text,
+  add column if not exists free_materials_text text,
+  add column if not exists free_materials_cta text,
+  add column if not exists company_eyebrow text,
+  add column if not exists company_title text,
+  add column if not exists company_text text,
+  add column if not exists company_list_intro text,
+  add column if not exists company_list jsonb not null default '[]'::jsonb,
+  add column if not exists cases_eyebrow text,
+  add column if not exists cases_title text,
+  add column if not exists cases_text text,
+  add column if not exists cases_list_intro text,
+  add column if not exists cases_list jsonb not null default '[]'::jsonb,
+  add column if not exists cases_cta text;

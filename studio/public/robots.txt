@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /profile
+Disallow: /cabinet
+Disallow: /my-courses
+
+# Домен әлі белгісіз болғандықтан толық сілтеме жоқ — доменіңіз белгілі болғанда мына жолды қосыңыз:
+# Sitemap: https://СІЗДІҢ-ДОМЕН/api/sitemap.xml

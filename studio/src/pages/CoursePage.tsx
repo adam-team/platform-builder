@@ -16,6 +16,10 @@ import { isStaff } from '../lib/roles'
 
 type Group = { key: string; module: CourseModule | null; title: string; lessons: Lesson[] }
 
+
+// Онлайн-оплата Freedom Pay включается переменной VITE_PAYMENT_PROVIDER=freedom (см. docs/PAYMENTS.md)
+const ONLINE_PAY = import.meta.env.VITE_PAYMENT_PROVIDER === 'freedom'
+
 export default function CoursePage() {
   const { courseId } = useParams()
   const { profile, session } = useAuth()
@@ -160,11 +164,26 @@ export default function CoursePage() {
     reload()
   }
 
-  // Пока оплата подтверждается вручную: фиксируем заявку и открываем ссылку Kaspi Pay.
-  // Когда подключим API Kaspi, заявку будет закрывать сервер автоматически.
+  // Два режима оплаты (docs/PAYMENTS.md):
+  // • VITE_PAYMENT_PROVIDER=freedom — онлайн через Freedom Pay: сервер создаёт платёж, ученик платит
+  //   на странице Freedom Pay (карта, Kaspi QR и др.), курс открывается сам после оплаты (/api/pay-result).
+  // • иначе — вручную: фиксируем заявку и открываем ссылку Kaspi Pay; админ подтверждает в «Продажах».
   async function buy() {
     if (!profile || !course) return
     setBusy(true)
+    if (ONLINE_PAY) {
+      const { data } = await supabase.auth.getSession()
+      const r = await fetch('/api/pay-create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${data.session?.access_token ?? ''}` },
+        body: JSON.stringify({ courseId: course.id }),
+      })
+      const j = await r.json().catch(() => ({}))
+      setBusy(false)
+      if (j.url) window.location.href = j.url
+      else window.alert(j.error ?? 'Не удалось перейти к оплате')
+      return
+    }
     if (!pending) {
       await supabase.from('payments').insert({ user_id: profile.id, course_id: course.id, amount_kzt: course.price_kzt })
       setPending(true)
@@ -268,7 +287,7 @@ export default function CoursePage() {
                 ) : (
                   <>
                     {pending && <p className="muted small" style={{ marginBottom: 10 }}>Төлем өтінімі жіберілді — төлем расталған соң курс ашылады.</p>}
-                    {course.payment_url && (
+                    {(course.payment_url || (ONLINE_PAY && course.price_kzt)) && (
                       <button className="btn btn-primary btn-lg" onClick={buy} disabled={busy}>
                         {pending ? 'Төлемді жалғастыру' : 'Курсты алу'}
                       </button>

@@ -99,15 +99,20 @@ Claude Code: самая новая Opus, усилие не ниже high. Codex:
 
 ## Этап 7. Сервисы ⏸ → `INTEGRATIONS.md`
 
-Поштучно, владелец создаёт аккаунты сам, агент ведёт по шагам и не просит присылать пароли.
+Полный порядок с нуля — [`docs/FROM-ZERO.md`](../FROM-ZERO.md). Сначала проверь подключённые коннекторы Claude
+(GitHub, Supabase, Vercel, Resend, Gmail) и попроси владельца подключить недостающие: дальше работаешь через них сам.
+Владелец создаёт аккаунты и вводит ключи сам, агент не просит присылать пароли в чат.
 
-1. **Supabase** (база, вход, права): новый проект, URL и anon key в `.env.local`. SQL из `supabase/RUN_ALL_migrations.sql` владелец вставляет в SQL Editor, агент подсказывает порядок.
-2. **Vercel** (хостинг): репозиторий GitHub → импорт в Vercel, переменные из `.env.example`.
-3. **Resend** (письма о доступе): домен, ключ, `RESEND_FROM`.
-4. **Google Sheets** (резервная копия регистраций): по желанию, скрипт `docs/google-sheet-apps-script.gs`.
-5. Первый админ: после регистрации владелец выполняет одну строку SQL (в `schema.sql` внизу), агент даёт её с его почтой.
+0. Спроси вариант выкладки: **А — без домена** (`*.vercel.app`, письма Supabase или Gmail SMTP) или **Б — свой домен** (Resend + DNS).
+1. **Supabase** (коннектор): новый проект → `studio/supabase/NEW_PROJECT.sql` целиком (для старой базы — `RUN_ALL_migrations.sql` и номерные миграции) → Advisors → Security.
+2. **GitHub** (коннектор или `gh`): репозиторий владельца, первый коммит `projects/<id>/site`.
+3. **Vercel** (коннектор): проект из репозитория, переменные из `.env.example`, `SITE_URL`; Supabase → Auth → URL Configuration на адрес сайта.
+4. **Письма**: вариант А — Gmail SMTP в Supabase (пароль приложения вводит владелец); вариант Б — Resend: домен, DNS, `RESEND_FROM`, SMTP Resend в Supabase.
+5. **Оплата** — [`docs/PAYMENTS.md`](../PAYMENTS.md): Kaspi Pay вручную сразу или Freedom Pay автоматически (`VITE_PAYMENT_PROVIDER=freedom`).
+6. **Google Sheets** (резервная копия регистраций): по желанию, скрипт `docs/google-sheet-apps-script.gs`.
+7. Первый админ: после регистрации владельца одна строка SQL через коннектор Supabase: `update profiles set role = 'admin' where email = '<почта>'`.
 
-Закрыт этап: `INTEGRATIONS.md` с галочкой на каждом сервисе и без единого секрета в тексте.
+Закрыт этап: `INTEGRATIONS.md` с галочкой на каждом сервисе, вариантом А/Б и без единого секрета в тексте.
 
 ## Этап 8. Сборка в `projects/<id>/site/`
 
